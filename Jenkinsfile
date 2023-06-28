@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Maven Version') {
             steps {
-                bat 'mvn -v'
+               sh 'mvn -v'
             }
         }
         stage('Running Test') {
             steps {
-                bat 'mvn clean test'
+                sh 'mvn clean test'
             }
         }
       }
