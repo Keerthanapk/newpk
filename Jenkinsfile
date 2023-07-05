@@ -2,9 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('maven version') {
             steps {
-                echo 'Hello World'
+                echo 'mvn version'
+            }
+        }
+         stage('Running clean test') {
+            steps {
+                echo 'mvn clean test'
             }
         }
     }
